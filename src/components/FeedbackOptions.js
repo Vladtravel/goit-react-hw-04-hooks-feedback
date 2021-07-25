@@ -1,10 +1,9 @@
-import React from "react";
 import PropTypes from "prop-types";
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => (
   <ul>
     {options.map((item) => (
-      <button key={item} className="btn-good" type="button" onClick={onLeaveFeedback(item)}>
+      <button key={item} className="btn-good" type="button" onClick={() => onLeaveFeedback(item)}>
         {item}
       </button>
     ))}
